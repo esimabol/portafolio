@@ -16,7 +16,7 @@ li a{
     color:var(--primary-color);
 }
 
-.button {
+.button {    
     position: relative;
     cursor: pointer;
     background-color: var(--primary-color);
