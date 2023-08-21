@@ -1,0 +1,37 @@
+nav .menu {
+    display: flex;
+    list-style: none;
+    gap: 40px;
+    
+}
+
+li a{
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight:900;
+}
+
+.active {
+    color:var(--primary-color);
+}
+
+.button {
+    position: relative;
+    cursor: pointer;
+    background-color: var(--primary-color);
+    color:white;
+    padding-inline-start: 24px;
+    padding-inline-end: 24px;
+    padding-block-start: 13px;
+    padding-block-end: 13px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    border:none;
+    font-weight: 900;
+}
+
+.button:hover {
+    top:2px;
+}
+

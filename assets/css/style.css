@@ -1,0 +1,34 @@
+@import "./header.css";
+@import "./navigation.css";
+
+:root {
+  --gradiente:radial-gradient(41.48% 11.48% at 2.38% 8.52%, #747DE9 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
+  --primary-color:#310A90;
+  --primary-font: 'Poppins', sans-serif;
+  --secundary-font: 'Roboto', sans-serif;
+  --center: 0 auto;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  background: var(--gradiente);
+  font-family: var(--primary-font);
+  color: var(--primary-color);
+  min-block-size:100vh;
+}
+
+header, nav, section, article, figure, figcaption, hgroup, aside, footer, label {
+  display: block;
+}
+
+.container {
+  max-width: 1300px;
+  margin:var(--center);
+}
+
