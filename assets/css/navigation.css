@@ -1,4 +1,4 @@
-nav .menu {
+.navigation .menu {
     display: flex;
     list-style: none;
     gap: 40px;
@@ -16,7 +16,8 @@ li a{
     color:var(--primary-color);
 }
 
-.button {    
+.button,
+.curriculum {    
     position: relative;
     cursor: pointer;
     background-color: var(--primary-color);
@@ -35,3 +36,8 @@ li a{
     top:2px;
 }
 
+@media screen and (max-width: 768px){
+    .navigation{
+        display: none;
+    }
+}
