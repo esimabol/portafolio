@@ -1,0 +1,362 @@
+//Add variables here:
+$document-color: radial-gradient(41.48% 11.48% at 2.38% 8.52%, #747DE9 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
+$white: white;
+$purple: #310A90;
+$fontBase: 'Poppins', sans-serif;
+$fontSecondary: 'Oxygen', sans-serif;
+$headline1: bold 95px/153.71px $fontBase;
+$headline2: bold 59px/95px $fontBase;
+$headline3: bold 48px/77px $fontBase;
+$headline4: bold 34px/55px $fontBase;
+$headline5: bold 24px/38px $fontBase;
+$body1: 16px/25px $fontBase;
+$body2: 14px/22px $fontBase;
+$button: bold 14px/22px $fontBase;
+$caption: 12px/19px $fontBase;
+
+//Mixins
+@mixin button {    
+  background-color: $purple;
+  color: $white;
+  font: $button;
+  padding-inline-start: 24px;
+  padding-inline-end: 24px;
+  padding-block-start: 13px;
+  padding-block-end: 13px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  position: relative; 
+}
+
+@mixin isSecondary{
+    background: unset;
+    color: $purple;
+    border: 2px solid $purple;
+}
+
+@mixin title{
+    background: $purple;
+    align-self: flex-start;
+    color:$white;
+    font: $headline5;
+    padding-block-start:4px;
+    padding-block-end: 4px;
+    padding-inline-start:4px;
+    padding-inline-end:4px;
+    text-decoration: none;
+    box-shadow: -4px 4px 0 $white;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    font-size: 16px;
+}
+body {
+    background: $document-color;
+    min-block-size: 100vh;
+    color:$purple;
+}
+header, nav, section, article, figure, figcaption, hgroup, aside, footer, label, span {
+    display: block;
+}
+
+.container{    
+    max-inline-size: 1158px;
+    padding-inline-end: 16px;
+    padding-inline-start: 16px;
+    margin: auto;      
+}
+
+.header{     
+    position: sticky;
+    top: 0;
+    backdrop-filter: blur(10px); 
+    z-index: 1;
+    display: flex;    
+    justify-content: space-between;
+    align-items: center;
+    block-size: 80px; 
+    .button{
+        display: none;
+    }     
+    .logo{
+        text-decoration: none;
+        font-size:2rem;
+        font-weight: 900;
+        color:$purple;
+    }
+}
+.menu{
+    display: none;
+    ul{
+        display: flex;
+        list-style: none;
+        gap:40px;
+        a{
+            text-decoration: none;
+            color:$white;
+            font: $button;
+            text-transform: uppercase;           
+        }
+        a.isActive{
+            color:$purple;
+        }
+    }
+}
+
+.button {
+    @include button;
+    &:hover{
+        top:2px;
+    }
+}
+
+.isSecondary{
+    @include isSecondary;
+}
+
+.title{
+    @include title;
+}
+.hero{
+    padding-top:16px;
+    // padding-block-start: 16px;
+    .hero-description{
+        display: flex;
+        flex-direction: column;
+        gap:16px;
+    }
+    .hero-image{
+        text-align: center;
+        img{
+            max-inline-size: 100%;
+            block-size: auto;
+            border-radius:4px;
+        }
+    }
+    h1{
+        font: $headline3;        
+    }
+    span:first-child{
+        font: $headline5;
+    }
+    p{
+        font: $body1;
+        font-weight: 400;
+        line-height: 26px;
+    }
+    .social{
+        padding-bottom: 24px;
+        display: flex;
+        gap: 16px;
+        .button-icon{
+            background-color: $white;
+            padding:10px;
+            border:2px solid $purple;
+            border : {
+                radius: 4px;
+            }
+            text-decoration: none;
+            display: inline-block;
+            img{
+                vertical-align: middle;
+            }            
+        }
+    }
+}
+.content{
+    padding-block-start:40px;
+    padding-block-end:40px;
+    font: $body1;
+    text-align: center;
+    p{
+        line-height: 39px;
+        letter-spacing: 0.12px;
+    }
+}
+.projects{
+    padding-block-start: 40px;
+    padding-block-end:40px;
+   img{
+    max-inline-size: 100%;
+   }
+   .projects-description{
+    display: flex;
+    flex-direction: column;
+    gap:16px;
+    p{
+        font-weight: 400;
+        line-height: 26px;
+        letter-spacing: 0.09px;
+        font:$body2;
+    }
+   }
+}
+.coments{
+    padding-block-start: 40px;
+    padding-block-end: 40px;    
+    .card{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+        border-radius: 24px;
+        background: rgba(254, 254, 254, 0.455);
+        backdrop-filter: blur(20px);
+        text-align: center;
+        padding-block-start: 24px;
+        padding-block-end: 24px;
+        padding-inline-start: 24px;
+        padding-inline-end: 24px;
+        height: 300px;
+        span{
+            font : {
+                family: $fontSecondary;
+                size:1rem;
+                weight:700;
+            }
+            line-height: 26px;
+            letter-spacing: 0.09px;
+        }
+        blockquote{
+            font: $caption;
+            opacity: 0.5;
+        }
+    }    
+}
+.form{
+    margin-block-end: 80px;
+    .form-content{
+        display: flex;
+        flex-direction: column;
+        gap:16px;
+        max-inline-size:540px;
+        margin: auto;
+        font:$body1;
+    }
+    p{
+        color: $white;
+        text-align: center;
+    }
+    label{
+        font:$button;
+    }
+    input, textarea{
+        border: 2px solid #858C94;
+        border-radius: 8px;
+        padding-inline-end: 16px;
+        padding-inline-start: 16px;
+        padding-block-start: 12px;
+        padding-block-end: 12px;
+        margin-block-start: 8px;
+    }
+}
+
+.footer{
+    color:$white;
+    text-align: center;
+    padding-block-start: 24px;
+    padding-block-end:24px;
+    .social{
+        padding-bottom: 24px;
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        .button-icon{
+            background-color: $white;
+            padding:10px;
+            border:2px solid $purple;
+            border : {
+                radius: 4px;
+            }
+            text-decoration: none;
+            display: inline-block;
+            img{
+                vertical-align: middle;
+            }            
+        }
+    }
+    p{
+        font:$body1;
+        line-height: 26px;
+    }
+   
+}
+
+
+
+@media screen and (min-width: 768px) {
+    .header .button{
+        display: block;
+    }
+    .menu {
+      display: block;
+    }
+    .hero {
+        display: flex;
+        gap: 32px;
+      }
+      .hero-description {
+        order: 1;
+        max-inline-size: 450px;
+      }
+      .hero-image {
+        order: 2;
+        text-align: end;
+        flex: 1;
+        
+      }
+
+ 
+    .projects {
+        display: flex;
+        align-items: center;
+        gap: 32px;
+        padding-block-start: 80px;
+        padding-block-end: 80px;   
+    //     .projects-description {        
+    //         flex: 1;    
+    //     }
+    //     .projects-image{
+    //         order: 1;
+    //         flex: 1;
+    //         text-align: center;
+    //     }    
+    }  
+
+    
+    
+}
+
+@media screen and (min-width: 1024px) {   
+    .hero-image img {
+      inline-size: 500px;
+      block-size: 504px;
+    }
+    .projects:nth-child(odd) .projects-image {
+        order: 2;
+        // flex:1;
+        text-align: center;
+      } 
+    .content{
+        padding-block-start:80px;
+        padding-block-end:80px;
+        p{
+            font-size:2rem;
+            line-height: 50px;
+        }
+    }
+    .card{
+        width:80%;
+        margin: auto;
+    }
+}
+
+          

@@ -1,0 +1,105 @@
+-var pageTitle = "Eddy Simancas";
+-var menuItems = ['Proyectos', 'Hablemos'];
+doctype 
+html 
+    head
+        meta(charset="utf-8") 
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description", content="Portafolio de Eddy Simancas. FrontEnd developer")
+        meta(name="author", content="Eddy simancas")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Poppins&family=Roboto&display=swap" rel="stylesheet")
+        link(href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet")
+        link(rel="stylesheet", href="assets/css/style.css")
+        title #{pageTitle}
+    body
+        .container
+            header.header     
+                a.logo(href="index.html") #{pageTitle}                                                      
+                nav.menu
+                    ul 
+                        li 
+                            a.isActive(href="#") Hola
+                        each item in menuItems 
+                            li
+                                a(href="#")=item
+                button.button curriculum                  
+            section.hero                          
+                .hero-image 
+                    img(src="assets/img/profile.jpg", width="338" height="330" alt="foto de perfil de Eddy Simancas")
+                .hero-description 
+                    h1
+                        span ¡Hola todos!
+                        span Soy #{pageTitle}
+                    p Frontend Developer de Colombia y aficionado de la tecnologia que le encanta implementar diseños que inspiran y atraen a las personas
+                    .social 
+                        a.button-icon(href="tel:3215881812") 
+                            img(src="assets/icons/icon-phone.svg", alt="icono de telefono de eddy 3215881812")
+                        a.button-icon(href="mailto:edylber.simancas@outlook.com")
+                            img(src="assets/icons/icon-important_mail.svg", alt="icono de correo electronico de eddy simancas")
+                        a.button-icon(href="#")
+                            img(src="assets/icons/icon-twitter_squared.svg", alt="icono de twitter de eddy simancas")
+                        a.button-icon(href="#")
+                            img(src="assets/icons/icon-github.svg", alt="icono de github de eddy simancas")
+                    a.button(href="#") Descargar Curriculum
+            section.content            
+                p A lo largo de mi carrera como Frontend, he tenido el privilegio de trabajar en proyectos retadores e increíbles.
+                p 
+                    strong Aquí hay algunos que me gustaría compartir.
+                span 
+                    img(src="assets/img/arrow-down.svg", width="80" height="80" alt="icono de flecha hacia abajo")
+            section.projects              
+                .projects-image 
+                    img(src="assets/img/ipad.png", alt="")
+                .projects-description 
+                    a.title(href="#", target="_blank") Goolgle Clone
+                    p Accede a mas de 120 proyectos que te ayudaran a mejorar tus habilidades como desarrollador Front-End 
+                    a.button.isSecondary(href="#", target="_blank") Ver Código 
+                    a.button(href="#", target="_blank") Ver Proyecto
+            section.projects              
+                .projects-image 
+                    img(src="assets/img/ipad.png", alt="")
+                .projects-description 
+                    a.title(href="#", target="_blank") Goolgle Clone
+                    p Accede a mas de 120 proyectos que te ayudaran a mejorar tus habilidades como desarrollador Front-End 
+                    a.button.isSecondary(href="#", target="_blank") Ver Código 
+                    a.button(href="#", target="_blank") Ver Proyecto                        
+            section.coments            
+                    .card 
+                        img(src="assets/img/user.png", width="64", height="64" alt="leonidas esteban foto") 
+                        span "Jaume ha sido de gran ayuda para acelerar ciertos esfuerzos de desarrollo. Lo que nos hubiera llevado 6 meses solo les llevó 1,5 meses."
+                        blockquote leonidas esteban / cofundador y CEO leonidasesteban.com
+            aside.formulario            
+                form.form(action="", method="POST") 
+                    .form-content 
+                        h2.title Hablemos
+                        p Si estás interesado en trabajar conmigo en su próximo proyecto, no dude en ponerse en contacto conmigo.
+                        label(for="form-name") Nombre Completo 
+                        input(type="text", name="name", placeholder="Pepito Perez" required)
+                        label(for="form-email") Correo Electronico
+                        input(type="email", name="email", placeholder="mail@myemail.com" required)
+                        label(for="form-message") Mensaje 
+                        textarea(name="message", cols="30", rows="7", placeholder="Mensaje") 
+                        button.button(type="button") Enviar Mensaje
+            footer.footer            
+                .social 
+                    a.button-icon(href="tel:3215881812") 
+                        img(src="assets/icons/icon-phone.svg", alt="icono de telefono de eddy 3215881812")
+                    a.button-icon(href="mailto:edylber.simancas@outlook.com")
+                        img(src="assets/icons/icon-important_mail.svg", alt="icono de correo electronico de eddy simancas")
+                    a.button-icon(href="#")
+                        img(src="assets/icons/icon-twitter_squared.svg", alt="icono de twitter de eddy simancas")
+                    a.button-icon(href="#")
+                        img(src="assets/icons/icon-github.svg", alt="icono de github de eddy simancas")
+                P Hecho con &hearts; de Eddy Simancas Copyright 2023 &copy; &dash; Todos los derechos reservados
+
+        
+
+
+
+
+
+
+                    

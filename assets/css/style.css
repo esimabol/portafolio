@@ -1,46 +1,401 @@
-@import "./header.css";
-@import "./navigation.css";
-@import "./hero.css";
-@import "./content.css";
-@import "./projects.css";
-@import "./form.css";
-@import "./footer.css";
-
-:root {
-  --gradiente:radial-gradient(41.48% 11.48% at 2.38% 8.52%, #747DE9 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
-  --primary-color:#310A90;
-  --primary-font: 'Poppins', sans-serif;
-  --secundary-font: 'Roboto', sans-serif;
-  --center: 0 auto;
-}
 * {
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
+
 html {
   font-size: 16px;
 }
+
 body {
-  background: var(--gradiente);
-  font-family: var(--primary-font);
-  color: var(--primary-color);
-  min-block-size:100vh;
+  background: radial-gradient(41.48% 11.48% at 2.38% 8.52%, #747DE9 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
+  min-block-size: 100vh;
+  color: #310A90;
 }
 
 header, nav, section, article, figure, figcaption, hgroup, aside, footer, label, span {
   display: block;
 }
-a{
-  text-decoration: none;
-}
-
-img {
-  width: 100%;
-}
 
 .container {
-  max-width: 1200px;
-  margin:var(--center);
+  max-inline-size: 1158px;
+  -webkit-padding-end: 16px;
+          padding-inline-end: 16px;
+  -webkit-padding-start: 16px;
+          padding-inline-start: 16px;
+  margin: auto;
 }
 
+.header {
+  position: sticky;
+  top: 0;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  z-index: 1;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  block-size: 80px;
+}
+.header .button {
+  display: none;
+}
+.header .logo {
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 900;
+  color: #310A90;
+}
+
+.menu {
+  display: none;
+}
+.menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+.menu ul a {
+  text-decoration: none;
+  color: white;
+  font: bold 14px/22px "Poppins", sans-serif;
+  text-transform: uppercase;
+}
+.menu ul a.isActive {
+  color: #310A90;
+}
+
+.button {
+  background-color: #310A90;
+  color: white;
+  font: bold 14px/22px "Poppins", sans-serif;
+  -webkit-padding-start: 24px;
+          padding-inline-start: 24px;
+  -webkit-padding-end: 24px;
+          padding-inline-end: 24px;
+  -webkit-padding-before: 13px;
+          padding-block-start: 13px;
+  -webkit-padding-after: 13px;
+          padding-block-end: 13px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  border: none;
+  text-decoration: none;
+  text-align: center;
+  position: relative;
+}
+.button:hover {
+  top: 2px;
+}
+
+.isSecondary {
+  background: unset;
+  color: #310A90;
+  border: 2px solid #310A90;
+}
+
+.title {
+  background: #310A90;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  color: white;
+  font: bold 24px/38px "Poppins", sans-serif;
+  -webkit-padding-before: 4px;
+          padding-block-start: 4px;
+  -webkit-padding-after: 4px;
+          padding-block-end: 4px;
+  -webkit-padding-start: 4px;
+          padding-inline-start: 4px;
+  -webkit-padding-end: 4px;
+          padding-inline-end: 4px;
+  text-decoration: none;
+  -webkit-box-shadow: -4px 4px 0 white;
+          box-shadow: -4px 4px 0 white;
+}
+
+.hero {
+  padding-top: 16px;
+}
+.hero .hero-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.hero .hero-image {
+  text-align: center;
+}
+.hero .hero-image img {
+  max-inline-size: 100%;
+  block-size: auto;
+  border-radius: 4px;
+}
+.hero h1 {
+  font: bold 48px/77px "Poppins", sans-serif;
+}
+.hero span:first-child {
+  font: bold 24px/38px "Poppins", sans-serif;
+}
+.hero p {
+  font: 16px/25px "Poppins", sans-serif;
+  font-weight: 400;
+  line-height: 26px;
+}
+.hero .social {
+  padding-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+}
+.hero .social .button-icon {
+  background-color: white;
+  padding: 10px;
+  border: 2px solid #310A90;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+}
+.hero .social .button-icon img {
+  vertical-align: middle;
+}
+
+.content {
+  -webkit-padding-before: 40px;
+          padding-block-start: 40px;
+  -webkit-padding-after: 40px;
+          padding-block-end: 40px;
+  font: 16px/25px "Poppins", sans-serif;
+  text-align: center;
+}
+.content p {
+  line-height: 39px;
+  letter-spacing: 0.12px;
+}
+
+.projects {
+  -webkit-padding-before: 40px;
+          padding-block-start: 40px;
+  -webkit-padding-after: 40px;
+          padding-block-end: 40px;
+}
+.projects img {
+  max-inline-size: 100%;
+}
+.projects .projects-description {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+}
+.projects .projects-description p {
+  font-weight: 400;
+  line-height: 26px;
+  letter-spacing: 0.09px;
+  font: 14px/22px "Poppins", sans-serif;
+}
+
+.coments {
+  -webkit-padding-before: 40px;
+          padding-block-start: 40px;
+  -webkit-padding-after: 40px;
+          padding-block-end: 40px;
+}
+.coments .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 24px;
+  border-radius: 24px;
+  background: rgba(254, 254, 254, 0.455);
+  -webkit-backdrop-filter: blur(20px);
+          backdrop-filter: blur(20px);
+  text-align: center;
+  -webkit-padding-before: 24px;
+          padding-block-start: 24px;
+  -webkit-padding-after: 24px;
+          padding-block-end: 24px;
+  -webkit-padding-start: 24px;
+          padding-inline-start: 24px;
+  -webkit-padding-end: 24px;
+          padding-inline-end: 24px;
+  height: 300px;
+}
+.coments .card span {
+  font-family: "Oxygen", sans-serif;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 26px;
+  letter-spacing: 0.09px;
+}
+.coments .card blockquote {
+  font: 12px/19px "Poppins", sans-serif;
+  opacity: 0.5;
+}
+
+.form {
+  -webkit-margin-after: 80px;
+          margin-block-end: 80px;
+}
+.form .form-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 16px;
+  max-inline-size: 540px;
+  margin: auto;
+  font: 16px/25px "Poppins", sans-serif;
+}
+.form p {
+  color: white;
+  text-align: center;
+}
+.form label {
+  font: bold 14px/22px "Poppins", sans-serif;
+}
+.form input, .form textarea {
+  border: 2px solid #858C94;
+  border-radius: 8px;
+  -webkit-padding-end: 16px;
+          padding-inline-end: 16px;
+  -webkit-padding-start: 16px;
+          padding-inline-start: 16px;
+  -webkit-padding-before: 12px;
+          padding-block-start: 12px;
+  -webkit-padding-after: 12px;
+          padding-block-end: 12px;
+  -webkit-margin-before: 8px;
+          margin-block-start: 8px;
+}
+
+.footer {
+  color: white;
+  text-align: center;
+  -webkit-padding-before: 24px;
+          padding-block-start: 24px;
+  -webkit-padding-after: 24px;
+          padding-block-end: 24px;
+}
+.footer .social {
+  padding-bottom: 24px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.footer .social .button-icon {
+  background-color: white;
+  padding: 10px;
+  border: 2px solid #310A90;
+  border-radius: 4px;
+  text-decoration: none;
+  display: inline-block;
+}
+.footer .social .button-icon img {
+  vertical-align: middle;
+}
+.footer p {
+  font: 16px/25px "Poppins", sans-serif;
+  line-height: 26px;
+}
+
+@media screen and (min-width: 768px) {
+  .header .button {
+    display: block;
+  }
+  .menu {
+    display: block;
+  }
+  .hero {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 32px;
+  }
+  .hero-description {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    max-inline-size: 450px;
+  }
+  .hero-image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    text-align: end;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .projects {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 32px;
+    -webkit-padding-before: 80px;
+            padding-block-start: 80px;
+    -webkit-padding-after: 80px;
+            padding-block-end: 80px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .hero-image img {
+    inline-size: 500px;
+    block-size: 504px;
+  }
+  .projects:nth-child(odd) .projects-image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    text-align: center;
+  }
+  .content {
+    -webkit-padding-before: 80px;
+            padding-block-start: 80px;
+    -webkit-padding-after: 80px;
+            padding-block-end: 80px;
+  }
+  .content p {
+    font-size: 2rem;
+    line-height: 50px;
+  }
+  .card {
+    width: 80%;
+    margin: auto;
+  }
+}
