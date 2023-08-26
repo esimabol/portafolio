@@ -172,10 +172,13 @@ header, nav, section, article, figure, figcaption, hgroup, aside, footer, label,
     }
 }
 .content{
+    margin: 5% 0;
     padding-block-start:40px;
     padding-block-end:40px;
     font: $body1;
     text-align: center;
+    border-bottom:2px solid rgba(254, 254, 254, 0.455);
+    border-top:2px solid rgba(254, 254, 254, 0.455);
     p{
         line-height: 39px;
         letter-spacing: 0.12px;
@@ -199,7 +202,7 @@ header, nav, section, article, figure, figcaption, hgroup, aside, footer, label,
     }
    }
 }
-.coments{
+.coments{    
     padding-block-start: 40px;
     padding-block-end: 40px;    
     .card{
@@ -215,14 +218,14 @@ header, nav, section, article, figure, figcaption, hgroup, aside, footer, label,
         padding-block-end: 24px;
         padding-inline-start: 24px;
         padding-inline-end: 24px;
-        height: 300px;
+      
         span{
             font : {
                 family: $fontSecondary;
                 size:1rem;
                 weight:700;
             }
-            line-height: 26px;
+            line-height: 30px;
             letter-spacing: 0.09px;
         }
         blockquote{
@@ -356,6 +359,12 @@ header, nav, section, article, figure, figcaption, hgroup, aside, footer, label,
     .card{
         width:80%;
         margin: auto;
+    }
+    .footer{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 16px;
     }
 }
 

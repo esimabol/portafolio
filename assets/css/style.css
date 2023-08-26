@@ -175,12 +175,15 @@ header, nav, section, article, figure, figcaption, hgroup, aside, footer, label,
 }
 
 .content {
+  margin: 5% 0;
   -webkit-padding-before: 40px;
           padding-block-start: 40px;
   -webkit-padding-after: 40px;
           padding-block-end: 40px;
   font: 16px/25px "Poppins", sans-serif;
   text-align: center;
+  border-bottom: 2px solid rgba(254, 254, 254, 0.455);
+  border-top: 2px solid rgba(254, 254, 254, 0.455);
 }
 .content p {
   line-height: 39px;
@@ -244,13 +247,12 @@ header, nav, section, article, figure, figcaption, hgroup, aside, footer, label,
           padding-inline-start: 24px;
   -webkit-padding-end: 24px;
           padding-inline-end: 24px;
-  height: 300px;
 }
 .coments .card span {
   font-family: "Oxygen", sans-serif;
   font-size: 1rem;
   font-weight: 700;
-  line-height: 26px;
+  line-height: 30px;
   letter-spacing: 0.09px;
 }
 .coments .card blockquote {
@@ -397,5 +399,17 @@ header, nav, section, article, figure, figcaption, hgroup, aside, footer, label,
   .card {
     width: 80%;
     margin: auto;
+  }
+  .footer {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    gap: 16px;
   }
 }
