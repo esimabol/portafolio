@@ -29,6 +29,12 @@ header, nav, section, article, figure, figcaption, hgroup, aside, footer, label,
 }
 
 .header {
+  max-inline-size: 1158px;
+  -webkit-padding-end: 16px;
+          padding-inline-end: 16px;
+  -webkit-padding-start: 16px;
+          padding-inline-start: 16px;
+  margin: auto;
   position: sticky;
   top: 0;
   -webkit-backdrop-filter: blur(10px);

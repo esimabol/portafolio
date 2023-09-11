@@ -14,24 +14,24 @@ html
         link(href="https://fonts.googleapis.com/css2?family=Oxygen:wght@700&display=swap" rel="stylesheet")
         link(rel="stylesheet", href="assets/css/style.css")
         title #{pageTitle}
-    body
-        .container
-            header.header     
-                a.logo(href="index.html") #{pageTitle}                                                      
-                nav.menu
-                    ul 
-                        li 
-                            a.isActive(href="#") Hola
-                        each item in menuItems 
-                            li
-                                a(href="#")=item
-                button.button curriculum                  
+    body        
+        header.header     
+            a.logo(href="index.html") #{pageTitle}                                                      
+            nav.menu
+                ul 
+                    li 
+                        a.isActive(href="#") Hola
+                    each item in menuItems 
+                        li
+                            a(href="#")=item
+            button.button curriculum
+        .container                  
             section.hero                          
                 .hero-image 
                     img(src="assets/img/profile.jpg", width="338" height="330" alt="foto de perfil de Eddy Simancas")
                 .hero-description 
                     h1
-                        span ¡Hola todos!
+                        span ¡Hola a todos!
                         span Soy #{pageTitle}
                     p Frontend Developer de Colombia y aficionado de la tecnologia que le encanta implementar diseños que inspiran y atraen a las personas
                     .social 
