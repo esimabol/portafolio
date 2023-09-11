@@ -29,6 +29,7 @@ $caption: 12px/19px $fontBase;
   text-decoration: none;
   text-align: center;
   position: relative; 
+  cursor: pointer;
 }
 
 @mixin isSecondary{
@@ -74,19 +75,16 @@ header, nav, section, article, figure, figcaption, hgroup, aside, footer, label,
     margin: auto;      
 }
 
-.header{   
-    max-inline-size: 1158px;
-    padding-inline-end: 16px;
-    padding-inline-start: 16px;
-    margin: auto;    
+.header{          
     position: sticky;
     top: 0;
     backdrop-filter: blur(10px); 
     z-index: 1;
     display: flex;    
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     block-size: 80px; 
+    padding:0 15px;
     .button{
         display: none;
     }     
